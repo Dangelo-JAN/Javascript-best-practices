@@ -104,9 +104,9 @@ export default class ToDoList {
 
       checkBox.addEventListener('change', (e) => {
         if (e.target.checked) {
-          toDoCheck.True(todo.index);
+          toDoCheck.checker(todo.index, true);
         } else {
-          toDoCheck.False(todo.index);
+          toDoCheck.checker(todo.index, false);
         }
       });
     });
