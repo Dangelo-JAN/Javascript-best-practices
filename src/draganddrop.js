@@ -1,10 +1,8 @@
-function handleDragStart(e) {
-  console.log('estoy en el star');
+function handleDragStart() {
   this.style.opacity = '0.4';
 }
 
-function handleDragEnd(e) {
-  console.log('estoy en el end');
+function handleDragEnd() {
   this.style.opacity = '1';
 
   items.forEach((item) => {
@@ -13,7 +11,6 @@ function handleDragEnd(e) {
 }
 
 function handleDragOver(e) {
-  console.log('estoy en el over');
   if (e.preventDefault) {
     e.preventDefault();
   }
@@ -21,13 +18,11 @@ function handleDragOver(e) {
   return false;
 }
 
-function handleDragEnter(e) {
-  console.log('estoy en el enter');
+function handleDragEnter() {
   this.classList.add('over');
 }
 
-function handleDragLeave(e) {
-  console.log('estoy en el leave');
+function handleDragLeave() {
   this.classList.remove('over');
 }
 
