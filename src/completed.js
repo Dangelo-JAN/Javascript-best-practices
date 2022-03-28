@@ -13,19 +13,10 @@ const DeleteChecked = () => {
   window.location.reload();
 };
 
-const True = (index) => {
-  for (let i = 0; i < todoes.length; i += 1) {
+const checker = (index, bool) => {
+  for (let i = 0; i < todoes.length; i += 1){
     if (index === todoes[i].index) {
-      todoes[i].completed = true;
-      localStorage.setItem('todoes', JSON.stringify(todoes));
-    }
-  }
-};
-
-const False = (index) => {
-  for (let i = 0; i < todoes.length; i += 1) {
-    if (index === todoes[i].index) {
-      todoes[i].completed = false;
+      todoes[i].completed = bool;
       localStorage.setItem('todoes', JSON.stringify(todoes));
     }
   }
