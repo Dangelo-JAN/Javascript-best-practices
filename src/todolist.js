@@ -1,7 +1,7 @@
 import * as toDoCheck from './completed.js';
 import DeleteIcon from './delete_black_24dp.svg';
 
-//import * as dragAndDrop from './draganddrop.js';
+import * as dragAndDrop from './draganddrop.js';
 
 const toDoContainer = document.getElementById('todo-container');
 export default class ToDoList {
@@ -88,13 +88,11 @@ export default class ToDoList {
       checkBox.setAttribute('type', 'checkbox');
 
       // addEventListeners
-      /*
       taskRow.addEventListener('dragstart', dragAndDrop.handleDragStart);
       taskRow.addEventListener('dragover', dragAndDrop.handleDragOver);
       taskRow.addEventListener('dragenter', dragAndDrop.handleDragEnter);
       taskRow.addEventListener('dragleave', dragAndDrop.handleDragLeave);
       taskRow.addEventListener('dragend', dragAndDrop.handleDragEnd);
-      */
 
       deleteButtom.addEventListener('click', () => {
         this.remove(todo.index);
