@@ -1,3 +1,5 @@
+import UpdateLocalStorage from './updatelocalstorage.js'
+
 const todoes = JSON.parse(localStorage.getItem('todoes'));
 
 const DeleteChecked = () => {
