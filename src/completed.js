@@ -7,12 +7,7 @@ const DeleteChecked = () => {
 
   localStorage.setItem('todoes', JSON.stringify(temp));
   const newTodoes = JSON.parse(localStorage.getItem('todoes'));
-
-  for (let i = 0; i < newTodoes.length; i += 1) {
-    newTodoes[i].index = i + 1;
-  }
-  localStorage.setItem('todoes', JSON.stringify(newTodoes));
-  window.location.reload();
+  UpdateLocalStorage();
 };
 
 const checker = (index, bool) => {
