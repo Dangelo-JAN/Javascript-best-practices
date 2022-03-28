@@ -75,7 +75,6 @@ export default class ToDoList {
       inputTask.value = todo.description;
       deleteButtom.src = DeleteIcon;
 
-
       taskRow.id = todo.index;
       // Adding classes to elements
       taskRow.classList.add('row', 'drag');
