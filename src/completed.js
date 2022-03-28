@@ -22,4 +22,4 @@ const checker = (index, bool) => {
   }
 };
 
-export { DeleteChecked, True, False };
+export { DeleteChecked, checker };
