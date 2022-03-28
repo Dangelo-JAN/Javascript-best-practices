@@ -1,6 +1,6 @@
 import * as toDoCheck from './completed.js';
 import DeleteIcon from './delete_black_24dp.svg';
-import UpdateLocalStorage from './updatelocalstorage.js'
+import UpdateLocalStorage from './updatelocalstorage.js';
 
 import * as dragAndDrop from './draganddrop.js';
 
@@ -35,7 +35,12 @@ export default class ToDoList {
 
   setInputTask = (index, value) => {
     const todoes = JSON.parse(localStorage.getItem('todoes'));
-    UpdateLocalStorage();
+    for (let i = 0; i < todoes.length; i += 1) {
+      if (index === todoes[i].index) {
+        todoes[i].description = value;
+      }
+    }
+    localStorage.setItem('todoes', JSON.stringify(todoes));
   };
 
   remove = (index) => {
@@ -46,11 +51,7 @@ export default class ToDoList {
       }
     }
 
-    for (let i = 0; i < todoes.length; i += 1) {
-      todoes[i].index = i + 1;
-    }
-
-    localStorage.setItem('todoes', JSON.stringify(todoes));
+    UpdateLocalStorage(todoes);
     window.location.reload();
   };
 

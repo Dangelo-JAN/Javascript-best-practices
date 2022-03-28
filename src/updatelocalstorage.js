@@ -1,8 +1,8 @@
-const UpdateLocalStorage = () => {  
-  for (let i = 0; i < newTodoes.length; i += 1) {
-    newTodoes[i].index = i + 1;
+const UpdateLocalStorage = (todoes) => {
+  for (let i = 0; i < todoes.length; i += 1) {
+    todoes[i].index = i + 1;
   }
-  localStorage.setItem('todoes', JSON.stringify(newTodoes));
-}
+  localStorage.setItem('todoes', JSON.stringify(todoes));
+};
 
 export default UpdateLocalStorage;
