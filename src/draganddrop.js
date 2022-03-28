@@ -29,5 +29,5 @@ function handleDragLeave() {
 }
 
 export {
-  handleDragStart, handleDragEnd, handleDragOver, handleDragEnter, handleDragLeave
+  handleDragStart, handleDragEnd, handleDragOver, handleDragEnter, handleDragLeave,
 };
