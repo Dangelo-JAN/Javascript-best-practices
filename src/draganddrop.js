@@ -1,4 +1,4 @@
-let items = document.querySelectorAll('.drag');
+const items = document.querySelectorAll('.drag');
 
 function handleDragStart() {
   this.style.opacity = '0.4';
@@ -28,4 +28,6 @@ function handleDragLeave() {
   this.classList.remove('over');
 }
 
-export { handleDragStart, handleDragEnd, handleDragOver, handleDragEnter, handleDragLeave };
+export {
+  handleDragStart, handleDragEnd, handleDragOver, handleDragEnter, handleDragLeave
+};
